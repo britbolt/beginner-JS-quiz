@@ -11,7 +11,7 @@
   <body>
       <header>
           <div id="high-score">View high scores</div>
-          <div id="timer"></div>
+          <span id="clock-score"></span>
       </header>
     
 
@@ -24,11 +24,26 @@
 
       <div id="questions">
         <div id="q1">
-            <h1>question 1 text here</h1>
-            
+            <h1>Arrays in Javascript can be used to store _____.</h1>
+            <ul id="q1-choices">
+              <li><button type="button" class="button" id="q1-c1">numbers & strings</button></li>
+              <li><button type="button" class="button" id="q1-c2">other arrays</button></li>
+              <li><button type="button" class="button" id="q1-c3">booleans</button></li>
+              <li><button type="button" class="button" id="q1-c4">all of the above</button></li>
+            </ul>
+           
 
         </div>
-        <div id="q2"></div>
+
+        <div id="q2">
+          <h1>question 2 text here</h1>
+          <ul id="q2-choices">
+            <li>choice 1</li>
+            <li>choice 2</li>
+            <li>choice 3</li>
+            <li>choice 4</li>
+          </ul>
+        </div>
         <div id="q3"></div>
         <div id="q4"></div>
         <div id="q5"></div>
@@ -43,6 +58,7 @@
 
 
 
-    <script src="./assets/quiz.js"></script>
-  </body>
+   
+  </body> 
+  <script src="./assets/quiz.js"></script>
 </html>
