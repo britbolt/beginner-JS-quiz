@@ -16,7 +16,7 @@ const question1 = document.getElementById('q1');
   function scoreTimer() {
      let time = 60;
      const score = setInterval(function frame() {
-        if (time == 0) {
+            if (time == 0) {
             clearInterval(score);
             document.getElementById("clock-score").textContent = "TIME'S UP";
             document.getElementById('final-score').style.display = "block";
@@ -28,13 +28,6 @@ const question1 = document.getElementById('q1');
         console.log(time);
     },1000);
     };
-
-    
-
-    //scoreTimer();
-
-
-
 
 //start timer with "start quiz" button click
 //hide start-page div with button click
@@ -56,15 +49,13 @@ const correctq1 = document.getElementById('correct-q1c4');
        question2.style.display = 'block';
     });
 
-    document.querySelectorAll('.incorrect').forEach(incorrect => {
-        incorrect.addEventListener('click', toQuest2 => {
+    /*document.querySelectorAll('.incorrect').addEventListener('click', function loseTime () {
             document.getElementById('right-wrong').innerHTML = 'Incorrect!';
             question1.style.display = 'none';
             question2.style.display = 'block';
             time-=5;
             document.getElementById('clock-score').innerHTML = `0${time}`;
-        })
-      });
+        });*/
 
 
 const question3 = document.getElementById('q3');
@@ -81,17 +72,16 @@ const correctq3 = document.getElementById('correct-q3c3');
     
     correctq3.addEventListener("click", function showCorrect3 () {
         document.getElementById('right-wrong').innerHTML = 'Correct!';
-         question3.style.display = 'none';
+        question3.style.display = 'none';
         question4.style.display = 'block';
     });
-
 
 const question5 = document.getElementById('q5');
 const correctq4 = document.getElementById('correct-q4c3');
         
     correctq4.addEventListener("click", function showCorrec4 () {
          document.getElementById('right-wrong').innerHTML = 'Correct!';
-        questio4.style.display = 'none';
+        question4.style.display = 'none';
         question5.style.display = 'block';
     });
 
@@ -102,5 +92,13 @@ const correctq5 = document.getElementById('correct-q5c1');
         document.getElementById('right-wrong').innerHTML = 'Correct!';
         question5.style.display = 'none';
         finalScore.style.display = 'block';
-        clearInterval(score);
+        clearInterval(time);
+        localStorage.setItem('seconds', time);
     });
+
+    function storeName() {
+        let name = document.getElementById("submit").value;
+        localStorage.setItem(name);
+    }
+
+    
